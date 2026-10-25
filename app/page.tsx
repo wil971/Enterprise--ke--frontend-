@@ -23,7 +23,7 @@ export default function Home() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [authLoading, setAuthLoading] = useState(false);
-  const backendUrl = (process.env.NEXT_PUBLIC_BACKEND_URL || "").replace(/\\/+$/, "");
+  const backendUrl = (process.env.NEXT_PUBLIC_BACKEND_URL || "").replace(/\/+$/, "");
   const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "";
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function Home() {
   return <main className="shell">
     <aside className="sidebar">
       <div className="brand"><div className="brand-icon">✦</div><div><div className="brand-title">ENTERPRISE INTELLIGENCE</div><div className="brand-sub">Knowledge Graph Platform</div></div></div>
-      <div><div className="nav-label">WORKSPACE</div><div className="nav-item active">⌕ &nbsp; Knowledge Search</div><div className="nav-item">◎ &nbsp; Knowledge Graph</div><div className="nav-item">▤ &nbsp; Documents &amp; Evidence</div><div className="nav-item">⌘ &nbsp; Security &amp; Audit</div></div>
+      <div><div className="nav-label">WORKSPACE</div><div className="nav-item active">⌕ &nbsp; Knowledge Search</div><div className="nav-item">◎ &nbsp; Knowledge Graph</div><div className="nav-item">▤ &nbsp; Documents &amp; Evidence</div><div className="nav-item">⌘ &nbsp; Security &amp; Audit</div><a className="nav-item" href="/snake" style={{ textDecoration: "none" }}>◆ &nbsp; Snake Game</a></div>
       <div className="sidebar-bottom"><div className="status"><span className="status-dot"/> Frontend ready<br/><span>Backend connectivity is verified when you sign in or search.</span></div></div>
     </aside>
     <section className="main">

@@ -40,3 +40,4 @@ venv/
 # IDE files
 .vscode/
 .idea/
+next-env.d.ts
